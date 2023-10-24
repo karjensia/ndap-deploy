@@ -1,0 +1,42 @@
+---
+# NDAP Release 제품 Version: Charts Version
+chart_version: 7.1.0-SNAPSHOT
+
+# NDAP, OSS 외부 이미지 배포용 Version: App Version
+ndap_conductor_server:
+ndap_conductor_worker: 7.1.0-SNAPSHOT
+ndap_docs: 7.1.0-SNAPSHOT
+ndap_elasticsearch:
+ndap_gateway: 7.1.0-SNAPSHOT
+ndap_hive_metastore:
+ndap_hive_metastore_init_db:
+ndap_init_db: 7.1.0-SNAPSHOT
+ndap_init_token: 7.1.0-SNAPSHOT
+ndap_kyuubi_server:
+ndap_kyuubi_sparkjob_remover: 7.1.0-SNAPSHOT
+ndap_kyuubi_sparksql_remover: 7.1.0-SNAPSHOT
+ndap_mariadb:
+ndap_mgmt: 7.1.0-SNAPSHOT
+ndap_ranger_admin:
+ndap_ranger_init_repo: 7.1.0-SNAPSHOT
+ndap_solr:
+ndap_solr_operator:
+ndap_spark_historyserver:
+ndap_storage: 7.1.0-SNAPSHOT
+ndap_trino:
+ndap_trino_operator:
+ndap_web: 7.1.0-SNAPSHOT
+ndap_workbench: 7.1.0-SNAPSHOT
+ndap_workflow: 7.1.0-SNAPSHOT
+ndap_zookeeper:
+
+# NDAP Utils, 내부 빌드용 Version
+ndap_commons:
+ndap_ipc:
+ndap_orc:
+ndap_plugins:
+ndap_ranger_spark_plugins:
+ndap_spark:
+ndap_spark_atlas_connector:
+ndap_spark_plugins:
+ndap_trino_plugins:
