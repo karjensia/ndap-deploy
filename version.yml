@@ -1,42 +1,137 @@
 ---
-# NDAP Release 제품 Version: Charts Version
-chart_version: 7.1.0-SNAPSHOT
+# NDAP, OSS 외부 이미지 배포용 
+#  Charts Version:
+#    App Version:
+#    Init Version:
 
-# NDAP, OSS 외부 이미지 배포용 Version: App Version
-ndap_conductor_server:
-ndap_conductor_worker: 7.1.0-SNAPSHOT
-ndap_docs: 7.1.0-SNAPSHOT
-ndap_elasticsearch:
-ndap_gateway: 7.1.0-SNAPSHOT
-ndap_hive_metastore:
-ndap_hive_metastore_init_db:
-ndap_init_db: 7.1.0-SNAPSHOT
-ndap_init_token: 7.1.0-SNAPSHOT
-ndap_kyuubi_server:
-ndap_kyuubi_sparkjob_remover: 7.1.0-SNAPSHOT
-ndap_kyuubi_sparksql_remover: 7.1.0-SNAPSHOT
-ndap_mariadb:
-ndap_mgmt: 7.1.0-SNAPSHOT
-ndap_ranger_admin:
-ndap_ranger_init_repo: 7.1.0-SNAPSHOT
-ndap_solr:
-ndap_solr_operator:
-ndap_spark_historyserver:
-ndap_storage: 7.1.0-SNAPSHOT
-ndap_trino:
-ndap_trino_operator:
-ndap_web: 7.1.0-SNAPSHOT
-ndap_workbench: 7.1.0-SNAPSHOT
-ndap_workflow: 7.1.0-SNAPSHOT
-ndap_zookeeper:
+charts-version: 7.1.0
+
+ndap-conductor-server:
+  conductor-server: 3.13.3
+
+ndap-conductor-worker:
+  conductor-worker: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+
+ndap-docs:
+  ndap-docs: 7.1.0
+
+ndap-elasticsearch:
+  elasticsearch: 6.8.15
+
+ndap-gateway:
+  ndap-gateway: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+
+ndap-hive-metastore:
+  hive-metastore: 3.1.3-ndap-7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-plugins: 7.1.0
+
+ndap-hive-metastore-init-db:
+  hive-metastore: 3.1.3-ndap-7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-plugins: 7.1.0
+
+ndap-init-db:
+  ndap-sql: 7.1.0
+  mariadb-client: 10.3
+
+ndap-init-token:
+  mariadb-curl: 7.1.0
+
+ndap-kyuubi-server:
+  kyuubi-server: 1.7.3-runtime
+  nginx: 7.1.0
+  spark: 3.3.3-runtime
+  spark-py: 3.3.3-runtime
+
+ndap-kyuubi-sparkjob-remover:
+  kubectl: 1.25
+
+ndap-kyuubi-sparksql-remover:
+  kubectl: 1.25
+
+ndap-mariadb: 
+  mariadb: 10.3.36
+
+ndap-mgmt:
+  ndap-mgmt: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-pinpoint: 7.1.0
+
+ndap-ranger-admin:
+  ranger-admin: 2.4.0-ndap-7.1.0
+  solr: 8.11.2
+
+ndap-ranger-init-repo:
+  curl-ssl: 271
+
+ndap-solr:
+  busybox: 1.28.0-glibc
+  solr: 8.11.2
+
+ndap-solr-operator: 
+  solr-operator: 0.6.0
+
+ndap-spark-historyserver:
+  spark: 3.3.3-runtime-sh
+
+ndap-storage:
+  ndap-storage: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-pinpoint: 7.1.0
+        
+ndap-trino:
+  trino: 411-runtime
+
+ndap-trino-operator:
+  trino-operator: 7.1.0
+
+ndap-web:
+  ndap-web: 7.1.0
+  ndap-pinpoint: 7.1.0
+
+ndap-workbench:
+  ndap-workbench: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-pinpoint: 7.1.0
+
+ndap-workflow:
+  ndap-workflow: 7.1.0
+  ndap-jdbc-connector: 7.1.0
+  ndap-pinpoint: 7.1.0
+
+ndap-zookeeper:
+  zookeeper: 3.5.9
 
 # NDAP Utils, 내부 빌드용 Version
-ndap_commons:
-ndap_ipc:
-ndap_orc:
-ndap_plugins:
-ndap_ranger_spark_plugins:
-ndap_spark:
-ndap_spark_atlas_connector:
-ndap_spark_plugins:
-ndap_trino_plugins:
+ndap-maven: 7.1.0
+
+ndap-orc: 7.1.0
+
+ndap-commons:
+  ndap-security: 7.1.0
+  ndap-cipher: 7.1.0
+  ndap-api: 7.1.0
+
+ndap-ipc: 7.1.0
+
+ndap-plugins:
+  ndap-kyuubi-plugin: 7.1.0
+  ndap-hive-meta-plugin: 7.1.0
+
+ndap-spark-plugins:
+  ndap-spark-plugin: 7.1.0
+  nexr-spark-udf: 7.1.0
+
+ndap-ranger-spark-plugins:
+  ranger-spark-plugin: 2.4.0
+
+ndap-trino-plugins:
+  ranger-trino-plugin: 7.1.0
+  ranger-trino-plugin-rpm: 7.1.0
+
+ndap-spark-atlas-connector: 
+
+iceberg-runtime: 1.1.0-ndap-7.1.0
