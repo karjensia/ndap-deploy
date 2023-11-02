@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  user: root
+  max_fail_percentage: 0
+
+  vars_files:
+    - ../version.yml
+
+  roles:
+    - {
+        role: charts
+      }

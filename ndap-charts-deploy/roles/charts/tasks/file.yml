@@ -1,0 +1,208 @@
+---
+- name: "Copy Shell"
+  copy:
+    src: charts_download.sh
+    dest: /tmp/
+    mode: 0755
+
+- name: "Download k8s-charts"
+  shell: /tmp/charts_download.sh master
+
+- name: "Charts Version Rename"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/{{ item }}/Chart.yaml
+    regexp: '^version:'
+    line: 'version: {{ charts_version }}'
+    state: present
+  with_items:
+    - "{{ app_list }}"
+
+- name: "App Version Rename ndap-conductor-server"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-conductor-server/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_conductor_server.conductor_server }}'
+    state: present
+
+- name: "App Version Rename ndap-conductor-worker"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-conductor-worker/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_conductor_worker.conductor_worker }}'
+    state: present
+
+- name: "App Version Rename ndap-docs"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-docs/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_docs.ndap_docs }}'
+    state: present
+
+- name: "App Version Rename ndap-elasticsearch"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-elasticsearch/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_elasticsearch.elasticsearch }}'
+    state: present
+
+- name: "App Version Rename ndap-gateway"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-gateway/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_gateway.ndap_gateway }}'
+    state: present
+
+- name: "App Version Rename ndap-hive-metastore"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-hive-metastore/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_hive_metastore.hive_metastore }}'
+    state: present
+
+- name: "App Version Rename ndap-hive-metastore-init-db"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-hive-metastore-init-db/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_hive_metastore_init_db.hive_metastore }}'
+    state: present
+
+- name: "App Version Rename ndap-init-db"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-init-db/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_init_db.ndap_sql }}'
+    state: present
+
+- name: "App Version Rename ndap-init-token"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-init-token/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_init_token.mariadb_curl }}'
+    state: present
+
+- name: "App Version Rename ndap-kyuubi-server"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-kyuubi-server/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_kyuubi_server.kyuubi_server }}'
+    state: present
+
+- name: "App Version Rename ndap-kyuubi-sparkjob-remover"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-kyuubi-sparkjob-remover/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_kyuubi_sparkjob_remover.kubectl }}'
+    state: present
+
+- name: "App Version Rename ndap-kyuubi-sparksql-remover"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-kyuubi-sparksql-remover/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_kyuubi_sparksql_remover.kubectl }}'
+    state: present
+
+- name: "App Version Rename ndap-mariadb"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-mariadb/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_mariadb.mariadb }}'
+    state: present
+
+- name: "App Version Rename ndap-mgmt"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-mgmt/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_mgmt.ndap_mgmt }}'
+    state: present
+
+- name: "App Version Rename ndap-ranger-admin"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-ranger-admin/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_ranger_admin.ranger_admin }}'
+    state: present
+
+- name: "App Version Rename ndap-ranger-init-repo"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-ranger-init-repo/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_ranger_init_repo.curl_ssl }}'
+    state: present
+
+- name: "App Version Rename ndap-solr"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-solr/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_solr.solr }}'
+    state: present
+
+- name: "App Version Rename ndap-solr-operator"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-solr-operator/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_solr_operator.solr_operator }}'
+    state: present
+
+- name: "App Version Rename ndap-spark-historyserver"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-spark-historyserver/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_spark_historyserver.spark }}'
+    state: present
+
+- name: "App Version Rename ndap-storage"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-storage/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_storage.ndap_storage }}'
+    state: present
+
+- name: "App Version Rename ndap-trino"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-trino/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_trino.trino }}'
+    state: present
+
+- name: "App Version Rename ndap-trino-operator"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-trino-operator/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_trino_operator.trino_operator }}'
+    state: present
+
+- name: "App Version Rename ndap-web"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-web/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_web.ndap_web }}'
+    state: present
+
+- name: "App Version Rename ndap-workbench"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-workbench/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_workbench.ndap_workbench }}'
+    state: present
+
+- name: "App Version Rename ndap-workflow"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-workflow/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_workflow.ndap_workflow }}'
+    state: present
+
+- name: "App Version Rename ndap-zookeeper"
+  lineinfile:
+    dest: /tmp/k8s-charts/ndap/ndap-zookeeper/Chart.yaml
+    regexp: '^appVersion:'
+    line: 'appVersion: {{ ndap_zookeeper.zookeeper }}'
+    state: present
+
+#- name: "Delete Shell, Charts"
+#  file:
+#    path: "{{ item }}"
+#    state: absent
+#  with_items:
+#    - /tmp/charts_download.sh
+#    - /tmp/k8s-charts

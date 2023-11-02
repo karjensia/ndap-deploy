@@ -5,6 +5,33 @@
 #    Init Version:
 
 charts_version: 7.1.0
+app_list:
+  - "ndap-conductor-server"
+  - "ndap-conductor-worker"
+  - "ndap-docs"
+  - "ndap-elasticsearch"
+  - "ndap-gateway"
+  - "ndap-hive-metastore"
+  - "ndap-hive-metastore-init-db"
+  - "ndap-init-db"
+  - "ndap-init-token"
+  - "ndap-kyuubi-server"
+  - "ndap-kyuubi-sparksql-remover"
+  - "ndap-kyuubi-sparkjob-remover"
+  - "ndap-mariadb"
+  - "ndap-mgmt"
+  - "ndap-ranger-admin"
+  - "ndap-ranger-init-repo"
+  - "ndap-solr"
+  - "ndap-solr-operator"
+  - "ndap-spark-historyserver"
+  - "ndap-storage"
+  - "ndap-trino-operator"
+  - "ndap-trino"
+  - "ndap-web"
+  - "ndap-workbench"
+  - "ndap-workflow"
+  - "ndap-zookeeper"
 
 ndap_conductor_server:
   conductor_server: 3.13.3
@@ -52,7 +79,7 @@ ndap_kyuubi_sparkjob_remover:
 ndap_kyuubi_sparksql_remover:
   kubectl: 1.25
 
-ndap_mariadb: 
+ndap_mariadb:
   mariadb: 10.3.36
 
 ndap_mgmt:
@@ -68,10 +95,10 @@ ndap_ranger_init_repo:
   curl_ssl: 271
 
 ndap_solr:
-  busybox: 1.28.0_glibc
   solr: 8.11.2
+  busybox: 1.28.0_glibc
 
-ndap_solr_operator: 
+ndap_solr_operator:
   solr_operator: 0.6.0
 
 ndap_spark_historyserver:
