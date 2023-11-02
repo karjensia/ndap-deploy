@@ -4,134 +4,136 @@
 #    App Version:
 #    Init Version:
 
-charts-version: 7.1.0
+charts_version: 7.1.0
 
-ndap-conductor-server:
-  conductor-server: 3.13.3
+ndap_conductor_server:
+  conductor_server: 3.13.3
 
-ndap-conductor-worker:
-  conductor-worker: 7.1.0
-  ndap-jdbc-connector: 7.1.0
+ndap_conductor_worker:
+  conductor_worker: 7.1.0
+  ndap_jdbc_connector: 7.1.0
 
-ndap-docs:
-  ndap-docs: 7.1.0
+ndap_docs:
+  ndap_docs: 7.1.0
 
-ndap-elasticsearch:
+ndap_elasticsearch:
   elasticsearch: 6.8.15
 
-ndap-gateway:
-  ndap-gateway: 7.1.0
-  ndap-jdbc-connector: 7.1.0
+ndap_gateway:
+  ndap_gateway: 7.1.0
+  ndap_jdbc_connector: 7.1.0
 
-ndap-hive-metastore:
-  hive-metastore: 3.1.3-ndap-7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-plugins: 7.1.0
+ndap_hive_metastore:
+  hive_metastore: 3.1.3_ndap_7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_plugins: 7.1.0
 
-ndap-hive-metastore-init-db:
-  hive-metastore: 3.1.3-ndap-7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-plugins: 7.1.0
+ndap_hive_metastore_init_db:
+  hive_metastore: 3.1.3_ndap_7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_plugins: 7.1.0
 
-ndap-init-db:
-  ndap-sql: 7.1.0
-  mariadb-client: 10.3
+ndap_init_db:
+  ndap_sql: 7.1.0
+  mariadb_client: 10.3
 
-ndap-init-token:
-  mariadb-curl: 7.1.0
+ndap_init_token:
+  mariadb_curl: 7.1.0
 
-ndap-kyuubi-server:
-  kyuubi-server: 1.7.3-runtime
+ndap_kyuubi_server:
+  kyuubi_server: 1.7.3_runtime
   nginx: 7.1.0
-  spark: 3.3.3-runtime
-  spark-py: 3.3.3-runtime
+  spark: 3.3.3_runtime
+  spark_py: 3.3.3_runtime
 
-ndap-kyuubi-sparkjob-remover:
+ndap_kyuubi_sparkjob_remover:
   kubectl: 1.25
 
-ndap-kyuubi-sparksql-remover:
+ndap_kyuubi_sparksql_remover:
   kubectl: 1.25
 
-ndap-mariadb: 
+ndap_mariadb: 
   mariadb: 10.3.36
 
-ndap-mgmt:
-  ndap-mgmt: 7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-pinpoint: 7.1.0
+ndap_mgmt:
+  ndap_mgmt: 7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_pinpoint: 7.1.0
 
-ndap-ranger-admin:
-  ranger-admin: 2.4.0-ndap-7.1.0
+ndap_ranger_admin:
+  ranger_admin: 2.4.0_ndap_7.1.0
   solr: 8.11.2
 
-ndap-ranger-init-repo:
-  curl-ssl: 271
+ndap_ranger_init_repo:
+  curl_ssl: 271
 
-ndap-solr:
-  busybox: 1.28.0-glibc
+ndap_solr:
+  busybox: 1.28.0_glibc
   solr: 8.11.2
 
-ndap-solr-operator: 
-  solr-operator: 0.6.0
+ndap_solr_operator: 
+  solr_operator: 0.6.0
 
-ndap-spark-historyserver:
-  spark: 3.3.3-runtime-sh
+ndap_spark_historyserver:
+  spark: 3.3.3_runtime_sh
 
-ndap-storage:
-  ndap-storage: 7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-pinpoint: 7.1.0
+ndap_storage:
+  ndap_storage: 7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_pinpoint: 7.1.0
         
-ndap-trino:
-  trino: 411-runtime
+ndap_trino:
+  trino: 411_runtime
 
-ndap-trino-operator:
-  trino-operator: 7.1.0
+ndap_trino_operator:
+  trino_operator: 7.1.0
 
-ndap-web:
-  ndap-web: 7.1.0
-  ndap-pinpoint: 7.1.0
+ndap_web:
+  ndap_web: 7.1.0
+  ndap_pinpoint: 7.1.0
 
-ndap-workbench:
-  ndap-workbench: 7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-pinpoint: 7.1.0
+ndap_workbench:
+  ndap_workbench: 7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_pinpoint: 7.1.0
 
-ndap-workflow:
-  ndap-workflow: 7.1.0
-  ndap-jdbc-connector: 7.1.0
-  ndap-pinpoint: 7.1.0
+ndap_workflow:
+  ndap_workflow: 7.1.0
+  ndap_jdbc_connector: 7.1.0
+  ndap_pinpoint: 7.1.0
 
-ndap-zookeeper:
+ndap_zookeeper:
   zookeeper: 3.5.9
 
 # NDAP Utils, 내부 빌드용 Version
-ndap-maven: 7.1.0
+ndap_maven: 7.1.0
 
-ndap-orc: 7.1.0
+ndap_orc: 7.1.0
 
-ndap-commons:
-  ndap-security: 7.1.0
-  ndap-cipher: 7.1.0
-  ndap-api: 7.1.0
+ndap_commons:
+  ndap_security: 7.1.0
+  ndap_cipher: 7.1.0
+  ndap_api: 7.1.0
 
-ndap-ipc: 7.1.0
+ndap_ipc: 7.1.0
 
-ndap-plugins:
-  ndap-kyuubi-plugin: 7.1.0
-  ndap-hive-meta-plugin: 7.1.0
+ndap_plugins:
+  ndap_kyuubi_plugin: 7.1.0
+  ndap_hive_meta_plugin: 7.1.0
 
-ndap-spark-plugins:
-  ndap-spark-plugin: 7.1.0
-  nexr-spark-udf: 7.1.0
+ndap_spark_plugins:
+  ndap_spark_plugin: 7.1.0
+  nexr_spark_udf: 7.1.0
 
-ndap-ranger-spark-plugins:
-  ranger-spark-plugin: 2.4.0
+ndap_ranger_spark_plugins:
+  ranger_spark_plugin: 2.4.0
 
-ndap-trino-plugins:
-  ranger-trino-plugin: 7.1.0
-  ranger-trino-plugin-rpm: 7.1.0
+ndap_trino_plugins:
+  ranger_trino_plugin: 7.1.0
+  ranger_trino_plugin_rpm: 7.1.0
 
-ndap-spark-atlas-connector: 
+ndap_spark_atlas_connector:
+  spark_atlas_connector: 0.1.0_ndap_7.1.0
 
-iceberg-runtime: 1.1.0-ndap-7.1.0
+iceberg_runtime:
+  iceberg_runtime: 1.1.0_ndap_7.1.0
